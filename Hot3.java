@@ -1,5 +1,5 @@
-//3. ÎŞÖØ¸´×Ö·ûµÄ×î³¤×Ó´®
-//¸ø¶¨Ò»¸ö×Ö·û´® s £¬ÇëÄãÕÒ³öÆäÖĞ²»º¬ÓĞÖØ¸´×Ö·ûµÄ ×î³¤×Ó´® µÄ³¤¶È¡£
+//3. æ— é‡å¤å­—ç¬¦çš„æœ€é•¿å­ä¸²
+//ç»™å®šä¸€ä¸ªå­—ç¬¦ä¸² s ï¼Œè¯·ä½ æ‰¾å‡ºå…¶ä¸­ä¸å«æœ‰é‡å¤å­—ç¬¦çš„ æœ€é•¿å­ä¸² çš„é•¿åº¦ã€‚
 class Solution {
     public int lengthOfLongestSubstring(String s) {
 		 if (s.length()==0)
@@ -15,5 +15,21 @@ class Solution {
             max = Math.max(max,i-left+1);
         }
         return max;
+	    //    // è®°å½•å­—ç¬¦ä¸Šä¸€æ¬¡å‡ºç°çš„ä½ç½®
+        // int[] last = new int[128];
+        // for(int i = 0; i < 128; i++) {
+        //     last[i] = -1;
+        // }
+        // int n = s.length();
+        // int res = 0;
+        // int start = 0; // çª—å£å¼€å§‹ä½ç½®
+        // for(int i = 0; i < n; i++) {
+        //     int index = s.charAt(i);
+        //     start = Math.max(start, last[index] + 1);
+        //     res   = Math.max(res, i - start + 1);
+        //     last[index] = i;
+        // }
+        // return res;  
+	    
     }
 }
